@@ -223,3 +223,181 @@
 //        fun(arr,0);
 //    }
 //}
+
+////7. Print Even Indices
+//class day{
+//    static void fun(int[] arr,int i){
+//        if(i==arr.length) return;
+//        fun(arr,i+2);
+//        System.out.println(arr[i]);
+//    }
+//    public static void main(String args[]){
+//        int[] arr={1,2,3,4,5,6};
+//        fun(arr,0);
+//    }
+//}
+
+//8. Pyramid
+//import java.util.*;
+//class day
+//{
+//    static void print_space(int space)
+//    {
+//        if (space == 0)
+//            return;
+//        System.out.print(" ");
+//        print_space(space - 1);
+//    }
+//    static void print_asterisk(int asterisk)
+//    {
+//        if (asterisk == 0)
+//            return;
+//        System.out.print("* ");
+//        print_asterisk(asterisk - 1);
+//    }
+//    static void pattern(int n, int num)
+//    {
+//        if (n == 0)
+//            return;
+//        print_space(n - 1);
+//        print_asterisk(num - n + 1);
+//        System.out.println("");
+//
+//        pattern(n - 1, num);
+//    }
+//
+//    public static void main(String[] args)
+//    {
+//        int n = 5;
+//        pattern(n, n);
+//    }
+//}
+
+////9. Count vowel
+//import java.io.*;
+//class day {
+//    static int isVowel(char chars)
+//    {
+//        if (chars == 'a' || chars == 'e' || chars == 'i'
+//                || chars == 'o' || chars == 'u') {
+//            return 1;
+//        }
+//        else {
+//            return 0;
+//        }
+//    }
+//    static int vowelno(String str, int l)
+//    {
+//        if (l == 1) {
+//            return isVowel(str.charAt(l - 1));
+//        }
+//        return vowelno(str, l - 1)
+//                + isVowel(str.charAt(l - 1));
+//    }
+//    public static void main(String[] args)
+//            throws IOException
+//    {
+//        String str = "BufferedOutput";
+//        str = str.toLowerCase();
+//        System.out.println(
+//                "Total number of vowels in string are:");
+//        System.out.println(vowelno(str, str.length()));
+//    }
+//}
+
+////10. Factorial
+//class day{
+//    static int nums(int i){
+//        if(i<=1)  return 1;
+//        return nums(i-1)*i;
+//    }
+//    public static void main(String args[]){
+//        System.out.println(nums(5));
+//    }
+//}
+
+////11.Max Number
+//class day{
+//    static int nums(int[] arr,int i){
+//        if(i== arr.length-1) return arr[i];
+//        int max=nums(arr,i+1);
+//        return (arr[i] >max)? arr[i]: max;
+//    }
+//    public static void main(String args[]){
+//        int[] arr={1 ,-3, 5, 4 ,-6};
+//        System.out.println(nums(arr,0));
+//    }
+//}
+
+////12.Summation
+//class day{
+//    static int nums(int[] arr,int i){
+//        if(i==arr.length) return 0;
+//        return arr[i]+nums(arr,i+1);
+//    }
+//    public static void main(String args[]){
+//        int[] arr={1 ,4 ,2 ,7};
+//        System.out.println(nums(arr,0));
+//    }
+//}
+////13
+//import java.util.*;
+//
+//class Main {
+//    static int sumLastM(int[] arr, int index, int m) {
+//        if (m == 0) return 0;  // base case
+//        return arr[index] + sumLastM(arr, index + 1, m - 1);  // recursive step
+//    }
+//
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//
+//        int N = sc.nextInt();
+//        int M = sc.nextInt();
+//        int[] A = new int[N];
+//
+//        for (int i = 0; i < N; i++) {
+//            A[i] = sc.nextInt();
+//        }
+//
+//        int result = sumLastM(A, N - M, M);
+//        System.out.println(result);
+//    }
+//}
+
+////14.fibonacci
+//class day{
+//    static int nums(int i){
+//        if(i==0) return 0;
+//        if(i==1) return 1;
+//        return nums(i-1)+nums(i-2);
+//    }
+//    public static void main(String args[]){
+//
+//        System.out.println(nums(6));
+//    }
+//}
+////15.Array Average
+//class day{
+//    static int nums(int[] arr,int i){
+//        if(i==arr.length) return 0;
+//        return arr[i]+nums(arr,i+1);
+//
+//    }
+//    public static void main(String args[]){
+//        int[] arr={1 ,4 ,2 ,7};
+//        System.out.println(nums(arr,0)/ arr.length);
+//    }
+//}
+
+////16. Combination
+//class day{
+//    static int nums(int i){
+//        if(i<=1)  return 1;
+//        return nums(i-1)*i;
+//    }
+//    public static void main(String args[]){
+//        int ans=nums(4)/(nums(4-2)*2);
+//        System.out.println(ans);
+//    }
+//}
