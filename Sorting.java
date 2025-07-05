@@ -184,4 +184,104 @@ class GFG {
 }
 
 
+//================================MERGE SORT====================================
+////Merging two sorted array
+//class day{
+//    public static void main(String args[]){
+//        int[] a1={1,3,5,7,9};
+//        int[] a2={2,4,6,8,10,11,12,13,14};
+//        ArrayList<Integer> a3=new ArrayList<>();
+//        int i=0,j=0;
+//        while(i<a1.length && j<a2.length){
+//            if(a1[i]<a2[j]){
+//                a3.add(a1[i]);
+//                i++;
+//            }else{
+//                a3.add(a2[j]);
+//                j++;
+//            }
+//        }
+//        while(i<a1.length ){
+//            a3.add(a1[i]);
+//            i++;
+//        }
+//        while(j<a2.length ){
+//            a3.add(a2[j]);
+//            j++;
+//        }
+//        System.out.println(a3);
+//    }
+//}
+
+////Merge sort
+//class day{
+//    static void merge(int[] arr,int start,int mid,int end){
+//        int[] merge=new int[end-start+1];
+//        int i=start,j=mid+1;
+//        int c=0;
+//        while(i<=mid && j<=end){
+//            if(arr[i]<arr[j]){
+//                merge[c++]=arr[i++];
+//            }else{
+//                merge[c++]=arr[j++];
+//            }
+//        }
+//        while(i<=mid){
+//            merge[c++]=arr[i++];
+//        }
+//        while(j<=end){
+//            merge[c++]=arr[j++];
+//        }
+//        for (int k = 0; k < merge.length; k++) {
+//            arr[start + k] = merge[k];
+//        }
+//    }
+//    static void divide(int[] arr,int start,int end){
+//        int mid=(start+end)/2;
+//        if(start>=end) return;
+//        divide(arr,start,mid);
+//        divide(arr,mid+1,end);
+//        merge(arr,start,mid,end);
+//
+//    }
+//    public static void main(String args[]){
+//        int[] arr={10,1,56,9,62,12,3,64};
+//        divide(arr,0,arr.length-1);
+//        System.out.println(Arrays.toString(arr));
+//    }
+//}
+
+////QUICK SORT
+//class day {
+//    static void swap(int[] arr, int i, int j) {
+//        int temp = arr[i];
+//        arr[i] = arr[j];
+//        arr[j] = temp;
+//    }
+//    static void sort(int start, int end, int[] arr) {
+//        if (start >= end) return;
+//        int pivot = partition(arr, start, end);
+//        sort(start, pivot - 1, arr);
+//        sort(pivot + 1, end, arr);
+//    }
+//    static int partition(int[] arr, int start, int end) {
+//        int pivot = arr[end];
+//        int i = start - 1;
+//        for (int j = start; j <= end - 1; j++) {
+//            if (arr[j] < pivot) {
+//                i++;
+//                swap(arr, i, j);
+//            }
+//        }
+//        swap(arr, i + 1, end);
+//        return i + 1;
+//    }
+//
+//    public static void main(String args[]) {
+//        int[] arr = {10, 80, 30, 90, 40};
+//        int n = arr.length;
+//        sort(0, n - 1, arr);
+//        System.out.println(Arrays.toString(arr));
+//        }
+//    }
 
