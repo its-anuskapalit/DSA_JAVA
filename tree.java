@@ -155,8 +155,6 @@
 //    }
 //}
 
-import java.util.LinkedList;
-import java.util.Queue;
 
 ////========================LEVEL ORDER TRAVESAL(BFS)================================================
 ////queue
@@ -194,5 +192,46 @@ import java.util.Queue;
 //
 //        System.out.print("BFS (Level Order): ");
 //        bfs(root);
+//    }
+//}
+
+////========================(DFS)================================================
+
+//class TreeNode {
+//    int val;
+//    TreeNode left, right;
+//    TreeNode(int val) {
+//        this.val = val;
+//        this.left = this.right = null;
+//    }
+//}
+//class Tree {
+//    public static void dfs(TreeNode root) {
+//        if (root == null) return;
+//
+//        Stack<TreeNode> s = new Stack<>();
+//        s.push(root);
+//
+//        while (!s.isEmpty()) {
+//            TreeNode curr = s.pop();
+//            System.out.println(curr.val); 
+//
+//            // Push right first so left gets processed first (LIFO)
+//            if (curr.right != null) s.push(curr.right);
+//            if (curr.left != null) s.push(curr.left);
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        TreeNode root = new TreeNode(1);
+//        root.left = new TreeNode(2);
+//        root.right = new TreeNode(3);
+//        root.left.left = new TreeNode(4);
+//        root.left.right = new TreeNode(5);
+//        root.right.left = new TreeNode(6);
+//        root.right.right = new TreeNode(7);
+//
+//        System.out.println("DFS (Preorder): ");
+//        dfs(root);
 //    }
 //}
